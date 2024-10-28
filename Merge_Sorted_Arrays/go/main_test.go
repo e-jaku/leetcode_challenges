@@ -7,7 +7,6 @@ import (
 )
 
 func TestMerge(t *testing.T) {
-
 	tests := []struct {
 		name     string
 		nums1    []int
