@@ -3,20 +3,15 @@ package main
 import "fmt"
 
 func removeElement(nums []int, val int) int {
-	count := 0
-	var result []int
-	for index, numVal := range nums {
-		if val == numVal {
-			count++
-			nums[index] = -1
-		} else {
-			result = append(result, numVal)
+	removedIndex := 0
+	for _, numVal := range nums {
+		if numVal != val {
+			nums[removedIndex] = numVal
+			removedIndex++
 		}
 	}
 
-	copy(nums, result)
-
-	return len(nums) - count
+	return removedIndex
 }
 
 func main() {

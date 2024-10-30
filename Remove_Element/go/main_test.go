@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-func TestMerge(t *testing.T) {
+func TestRemoveElement(t *testing.T) {
 	tests := []struct {
 		name      string
 		nums      []int
