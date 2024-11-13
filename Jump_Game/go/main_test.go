@@ -7,7 +7,6 @@ import (
 )
 
 func TestCanJump(t *testing.T) {
-
 	tests := []struct {
 		name       string
 		nums       []int

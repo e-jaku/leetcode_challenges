@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-func TestMaxProfit(t *testing.T) {
+func TestJumpGame(t *testing.T) {
 	tests := []struct {
 		name  string
 		nums  []int
