@@ -1,5 +1,6 @@
 # LeetCode challenge solutions
 
+
 Some context:
 * Solving the top 150 Interview challanges
 * Solved the challenges initially with Go
