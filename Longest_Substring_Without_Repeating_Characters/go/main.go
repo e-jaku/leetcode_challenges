@@ -12,17 +12,23 @@ func lengthOfLongestSubstring(s string) int {
 	encountered := map[rune]int{}
 	maxLen := 0
 	counter := 0
+	ignoreIndex := 0
 	for index, val := range s {
 		if kIndex, ok := encountered[val]; !ok {
 			//new char
 			encountered[val] = index
 		} else {
+			encountered[val] = index
+			if kIndex < ignoreIndex {
+				counter++
+				continue
+			}
+
 			if counter > maxLen {
 				maxLen = counter
 			}
 			counter = (index - kIndex - 1)
-			deleteBeforeVal(kIndex, encountered)
-			encountered[val] = index
+			ignoreIndex = kIndex
 			if index == len(s)-1 {
 				break
 			}
@@ -38,15 +44,7 @@ func lengthOfLongestSubstring(s string) int {
 	return maxLen
 }
 
-func deleteBeforeVal(index int, known map[rune]int) {
-	for key, val := range known {
-		if val < index {
-			delete(known, key)
-		}
-	}
-}
-
 func main() {
-	str := "abcabcbb"
+	str := "aabaab!bb"
 	fmt.Println("The longest substring without repeating characters of string", str, "is", lengthOfLongestSubstring(str))
 }
