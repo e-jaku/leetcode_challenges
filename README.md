@@ -2,6 +2,6 @@
 
 
 Some context:
-* Solving the top 150 Interview challanges
+* Solving some interview challanges
 * Solved the challenges initially with Go
 * This might change further down the line
