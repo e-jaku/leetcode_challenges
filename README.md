@@ -1,5 +1,6 @@
 # LeetCode challenge solutions
 
+
 Some context: 
 * Solving some interview challanges
 * Solved the challenges initially with Go
